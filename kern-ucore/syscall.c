@@ -264,6 +264,12 @@ sys_mkfifo(uint32_t arg[]) {
     return sysfile_mkfifo(name, open_flags);
 }
 
+static uint32_t
+sys_hello() {
+    kprintf("kernel: hello world!\n\r");
+    return 1;
+}
+
 static uint32_t (*syscalls[])(uint32_t arg[]) = {
     [SYS_exit]              sys_exit,
     [SYS_fork]              sys_fork,
@@ -302,6 +308,7 @@ static uint32_t (*syscalls[])(uint32_t arg[]) = {
     [SYS_dup]               sys_dup,
     [SYS_pipe]              sys_pipe,
     [SYS_mkfifo]            sys_mkfifo,
+    [SYS_hello]             sys_hello,
 };
 
 #define NUM_SYSCALLS        ((sizeof(syscalls)) / (sizeof(syscalls[0])))
