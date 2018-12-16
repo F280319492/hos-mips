@@ -64,5 +64,6 @@ int sys_umount(const char *target);
 int sys_ioctl(int d, int request, unsigned long data);
 
 int sys_hello();
+int sys_free();
 
 #endif /* !__USER_LIBS_SYSCALL_H__ */

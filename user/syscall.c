@@ -251,3 +251,9 @@ int sys_hello()
 {
 	return syscall(SYS_hello);
 }
+
+int sys_free()
+{
+	return syscall(SYS_free);
+}
+

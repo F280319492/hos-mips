@@ -55,6 +55,7 @@
 #define SYS_umount			154
 
 #define SYS_hello           155
+#define SYS_free            156
 
 /* SYS_fork flags */
 #define CLONE_VM             0x00000100
